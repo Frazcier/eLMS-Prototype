@@ -28,6 +28,7 @@ ul {
     list-style: none;
 }
 
+/**** FOR TESTING PURPOSE ****/
 html {
     background: var(--bg-black-main);
 }
@@ -74,6 +75,10 @@ html {
     color: var(--color-white);
 }
 
+.navbar li a span {
+    font-weight: 200;
+}
+
 
 /**** SIDE-BAR SECTION ****/
 .side-bar {
@@ -92,20 +97,21 @@ html {
     transition: all 0.5s ease;
 }
 
+/**** IMAGE IS FOR LOGO TESTING ****/
 .side-bar .logo {
     position: fixed;
     top: 3.5rem;
 }
 
 .side-bar .logo img {
-    width: 5rem;
-    height: 3rem;
+    width: 4rem;
+    height: 2.5rem;
     border-radius: 0.5rem;
 }
 
 .side-bar .nav {
     position: fixed;
-    top: 7.5rem;
+    top: 7rem;
     align-items: center;
     text-align: center;
 }
