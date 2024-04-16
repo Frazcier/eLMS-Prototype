@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --bg-black-main: #18181b;
+    --bg-black-hover: #556a74;
+    --bg-black-secondary: #282a2d;
+    --bg-black-tertiary: #282a2e;
+    --color-blue: #01579b;
+    --color-blue-hover: #156baf;
+    --color-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    background: var(--bg-black-main);
+}
+
+/**** NAVBAR SECTION ****/
+.navbar {
+    height: 2.75rem;
+    background: var(--color-blue);
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid var(--bg-black-main);
+    padding: 5px;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 1;
+}
+
+.navbar .section-title {
+    position: fixed;
+    font-size: 1.50rem;
+    font-weight: 200;
+    left: 7rem;
+    color: var(--color-white);
+}
+
+.navbar .nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 1rem;
+}
+
+.navbar li {
+    padding: 0.6rem;
+}
+
+
+.navbar li:hover {
+    background: var(--color-blue-hover);
+}
+
+.navbar li a {
+    color: var(--color-white);
+}
+
+
+/**** SIDE-BAR SECTION ****/
+.side-bar {
+    width: 6rem;
+    background: var(--bg-black-secondary);
+    position: fixed;
+    height: 100%;
+    border-right: 1px solid var(--bg-black-main);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.side-bar .logo {
+    position: fixed;
+    top: 3.5rem;
+}
+
+.side-bar .logo img {
+    width: 5rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.side-bar .nav {
+    position: fixed;
+    top: 7.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.side-bar li {
+    padding: 0.4rem;
+}
+
+.side-bar li:hover {
+    background: var(--bg-black-hover);
+}
+
+.side-bar li a {
+    display: grid;
+    grid-template-rows: auto auto;
+    color: var(--color-white);
+    position: relative;
+}
+
+.side-bar li a i {
+    line-height: 2rem;
+}
+
+.side-bar li a span {
+    font-weight: 200;
+}
