@@ -1,7 +1,7 @@
 let navHome = document.querySelector(".nav-home"),
     navHomeList = navHome.querySelectorAll("li"),
     totalNavHomeList = navHomeList.length,
-    allSection = document.querySelectorAll(".section-home"),
+    allSection = document.querySelectorAll(".section"),
     totalSection = allSection.length;
 
 
@@ -54,9 +54,11 @@ function updateNavHome(element) {
 }
 
 // SWIPER SECTION //
-var swiper = new Swiper(".mySwiper", {
+var swiper = new swiper(".slide-content", {
+    loop: true,
     pagination: {
       el: ".swiper-pagination",
       dynamicBullets: true,
+      clickable: true,
     },
   });
