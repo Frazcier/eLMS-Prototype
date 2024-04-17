@@ -40,7 +40,7 @@ ul {
     right: 0;
     bottom: 0;
     z-index: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -76,7 +76,7 @@ ul {
     top: 0;
     left: 0;
     display: flex;
-    z-index: 1;
+    z-index: 10;
 }
 
 .navbar .section-title {
@@ -125,7 +125,7 @@ ul {
     align-items: center;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: 9;
     transition: all 0.5s ease;
 }
 
@@ -177,23 +177,130 @@ ul {
 
 /**** SIDE-BAR-RIGHT SECTION ****/
 .side-bar-right {
-    width: 10rem;
-    background: var(--color-white);
+    width: 18rem;
     position: fixed;
     height: 100%;
-    padding: 30px;
     display: flex;
+    padding-top: 3.5rem;
     flex-direction: column;
     right: 0;
     top: 0;
+    z-index: 9;
+}
+
+.side-bar-right .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/**** CALENDAR ****/
+.calendar-container {
+    display: flex;
+    margin-right: 1.5rem;
+}
+
+.wrapper {
+    width: 18rem;
+    background: var(--bg-black-secondary);
+    color: var(--color-white);
+    border-radius: 0.8rem;
+    border: 0.1rem solid var(--bg-black-hover);
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.8rem 0.6rem;
+}
+
+header .current-date {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+header .icons i {
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    line-height: 2rem;
+    color: var(--text-color-gray);
+}
+
+header .icons i:hover {
+    background: var(--bg-black-main);
+}
+
+header .icons i:last-child {
+    margin-right: -0.6rem;
+}
+
+.calendar {
+    padding: 0.5rem;
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.calendar .days {
+    margin-bottom: 1rem;
+}
+
+.calendar .weeks li{
+    font-weight: 500;
+}
+
+.calendar ul li {
+    width: calc(100% / 7);
+    position: relative;
+}
+
+.calendar .days li {
+    cursor: pointer;
+    z-index: 1;
+    margin-top: 1.5rem;
+}
+
+.days li.inactive {
+    color: var(--bg-black-hover);
+}
+
+.days li.active {
+    color: var(--text-color-black);
+}
+
+.calendar .days li::before {
+    position: absolute;
+    content: "";
+    height: 1.7rem;
+    width: 1.7rem;
+    top: 50%;
+    left: 50%;
     z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li:hover::before {
+    background: var(--bg-black-main);
+}
+
+.days li.active::before {
+    background-color: var(--color-white);
 }
 
 /**** HOME SECTION ****/
 .home {
     padding: 1rem 0 0 1rem;
     max-height: fit-content;
-    width: 75%;
+    width: 73.5%;
     display: block;
 }
 
@@ -250,7 +357,7 @@ ul {
 .courses-container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 79%;
     height: 30rem;
     margin-top: 3rem;
     background-color: var(--bg-black-secondary);
