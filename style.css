@@ -4,6 +4,8 @@
     --bg-black-hover: #556a74;
     --bg-black-secondary: #282a2d;
     --bg-black-tertiary: #282a2e;
+    --text-color-black: #000;
+    --text-color-gray: #999;
     --color-blue: #01579b;
     --color-blue-hover: #156baf;
     --color-white: #fff;
@@ -30,7 +32,6 @@ ul {
 
 .section {
     background: var(--bg-black-main);
-    min-height: 100vh;
     display: block;
     opacity: 1;
     position: fixed;
@@ -41,6 +42,14 @@ ul {
     z-index: 0;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+.section.back-section {
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
 }
 
 
@@ -66,7 +75,7 @@ ul {
     color: var(--color-white);
 }
 
-.navbar .nav {
+.navbar .nav-top {
     display: flex;
     position: fixed;
     top: 0;
@@ -120,7 +129,7 @@ ul {
     border-radius: 0.5rem;
 }
 
-.side-bar .nav {
+.side-bar .nav-side {
     position: fixed;
     top: 7rem;
     align-items: center;
@@ -152,14 +161,62 @@ ul {
 
 /**** HOME SECTION ****/
 .home {
-    padding: 1rem;
+    z-index: 2;
+    padding: 1rem 0 0 1rem;
+    max-height: fit-content;
+    width: 80%;
 }
 
-.navbar-home .nav {
+.navbar-home .nav-home {
     display: flex;
     gap: 1rem;
+    border-bottom: 0.1rem solid var(--bg-black-hover);
+    height: 2.3rem;
+    margin: 0 0 -1.4rem 0;
 }
 
-.navbar-home .nav li a{
+.nav-home li a{
+    color: var(--text-color-gray);
+    font-weight: 200;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-home li a::after {
+    content: '';
+    height: 0.25rem;
+    width: 100%;
+    background: var(--color-blue);
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -0.9rem;
+    opacity: 0;
+}
+
+.nav-home li a:hover {
     color: var(--color-white);
+}
+
+.nav-home li a.active {
+    color: var(--color-white);
+    transition: all 0.3s ease;
+}
+
+.nav-home li a.active::after {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/**** DASHBOARD SECTION ****/
+.dashboard {
+    padding: 1rem;
+    background-color: red;
+}
+
+
+/**** NEWS SECTION ****/
+.news {
+    padding: 1rem;
+    background-color: blue;
 }

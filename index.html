@@ -10,7 +10,7 @@
     <div class="main-container">
         <div class="navbar">
             <p class="section-title">Home</p>
-            <ul class="nav">
+            <ul class="nav-top">
                 <li><a href="#message"><i class="fa-solid fa-envelope"></i></a></li>
                 <li><a href="#notification"><i class="fa-solid fa-bell"></i></a></li>
                 <li><a href="#calendar"><i class="fa-regular fa-calendar-days"></i></a></li>
@@ -27,7 +27,7 @@
             <div class="logo">
                 <a href="#"><img src="/Images/test-logo.jpg"></a>
             </div>
-            <ul class="nav">
+            <ul class="nav-side">
                 <li><a href="#home"><i class="fa-solid fa-house-chimney"></i><span>Home</span></a></li>
                 <li><a href="#course"><i class="fa-solid fa-book"></i><span>Courses</span></a></li>
                 <li><a href="#path"><i class="fa-solid fa-signs-post"></i><span>Paths</span></a></li>
@@ -39,20 +39,22 @@
             </ul>
         </div>
         <div class="main-content">
-            <section class="home section">
+            <section class="home active section" id="home">
                 <div class="navbar-home">
-                    <ul class="nav">
-                        <li><a href="#dashboard"><span>Dashboard</span></a></li>
+                    <ul class="nav-home">
+                        <li><a href="#dashboard" class="active"><span>Dashboard</span></a></li>
                         <li><a href="#news"><span>News</span></a></li>
                     </ul>
                     <br>
                 </div>
-                 <div class="dashboard-container">
+            </section>
+            <section class="dashboard section" id="dashboard">
+                <div class="banner-container">
+                    
+                </div>
+            </section>
+            <section class="news section" id="news">
 
-                 </div>
-                 <div class="news-container">
-
-                 </div>
             </section>
         </div>
     </div>
