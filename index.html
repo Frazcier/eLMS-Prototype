@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prototype eLMS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <div class="main-container">
@@ -48,17 +49,26 @@
                     <br>
                 </div>
             </section>
-            <section class="dashboard section" id="dashboard">
+            <section class="dashboard active section-home" id="dashboard">
                 <div class="banner-container">
-                    
+                    <h2>Welcome</h2>
+                    <div class="swiper mySwipper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Image 1</div>
+                            <div class="swiper-slide">Image 2</div>
+                            <div class="swiper-slide">Image 3</div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </section>
-            <section class="news section" id="news">
+            <section class="news section-home hidden" id="news">
 
             </section>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/a9db9a42c4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

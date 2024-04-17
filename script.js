@@ -1,7 +1,7 @@
 let navHome = document.querySelector(".nav-home"),
     navHomeList = navHome.querySelectorAll("li"),
     totalNavHomeList = navHomeList.length,
-    allSection = document.querySelectorAll(".section"),
+    allSection = document.querySelectorAll(".section-home"),
     totalSection = allSection.length;
 
 
@@ -52,3 +52,11 @@ function updateNavHome(element) {
         }
     }
 }
+
+// SWIPER SECTION //
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+  });
