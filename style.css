@@ -211,6 +211,7 @@ ul {
 /**** DASHBOARD SECTION ****/
 .dashboard {
     padding: 1rem;
+    /* TESTING PURPOSES */
     background-color: red;
 }
 
@@ -218,5 +219,6 @@ ul {
 /**** NEWS SECTION ****/
 .news {
     padding: 1rem;
+    /* TESTING PURPOSES */
     background-color: blue;
 }
