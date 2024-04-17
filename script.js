@@ -53,7 +53,8 @@ function updateNavHome(element) {
     }
 }
 
-// SWIPER SECTION //
+// WORKING IN PROGRESS //
+/* SWIPER SECTION 
 var swiper = new swiper(".slide-content", {
     loop: true,
     pagination: {
@@ -61,4 +62,4 @@ var swiper = new swiper(".slide-content", {
       dynamicBullets: true,
       clickable: true,
     },
-  });
+  }); */

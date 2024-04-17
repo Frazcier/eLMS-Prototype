@@ -112,8 +112,8 @@ ul {
 }
 
 
-/**** SIDE-BAR SECTION ****/
-.side-bar {
+/**** SIDE-BAR-LEFT SECTION ****/
+.side-bar-left {
     width: 6rem;
     background: var(--bg-black-secondary);
     position: fixed;
@@ -130,45 +130,63 @@ ul {
 }
 
 /**** IMAGE IS FOR LOGO TESTING ****/
-.side-bar .logo {
+.side-bar-left .logo {
     position: fixed;
     top: 3.5rem;
 }
 
-.side-bar .logo img {
+.side-bar-left .logo img {
     width: 4rem;
     height: 2.5rem;
     border-radius: 0.5rem;
 }
 
-.side-bar .nav-side {
+.side-bar-left .nav-side {
     position: fixed;
     top: 7rem;
     align-items: center;
     text-align: center;
 }
 
-.side-bar li {
+.side-bar-left li {
     padding: 0.4rem;
 }
 
-.side-bar li:hover {
+.side-bar-left li.active {
     background: var(--bg-black-hover);
 }
 
-.side-bar li a {
+.side-bar-left li:hover {
+    background: var(--bg-black-hover);
+}
+
+.side-bar-left li a {
     display: grid;
     grid-template-rows: auto auto;
     color: var(--color-white);
     position: relative;
 }
 
-.side-bar li a i {
+.side-bar-left li a i {
     line-height: 2rem;
 }
 
-.side-bar li a span {
+.side-bar-left li a span {
     font-weight: 200;
+}
+
+/**** SIDE-BAR-RIGHT SECTION ****/
+.side-bar-right {
+    width: 10rem;
+    background: var(--color-white);
+    position: fixed;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
 
 /**** HOME SECTION ****/
@@ -176,6 +194,7 @@ ul {
     padding: 1rem 0 0 1rem;
     max-height: fit-content;
     width: 75%;
+    display: block;
 }
 
 .navbar-home .nav-home {
@@ -222,25 +241,105 @@ ul {
 /**** DASHBOARD SECTION ****/
 .dashboard {
     padding: 1rem;
-}
-
-.banner-container {
-    position: fixed;
     display: flex;
     flex-direction: column;
-    width: 74%;
+    gap: 1rem;
+}
+
+.banner-container,
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
     height: 30rem;
-    top: 7rem;
+    margin-top: 3rem;
     background-color: var(--bg-black-secondary);
     border: 0.1rem solid var(--bg-black-hover);
     border-radius: 0.5rem;
 }
 
-.banner-container h2{
+.banner-container h2,
+.courses-container h2{
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 1rem;
     font-weight: 300;
     border-bottom: 0.1rem solid var(--bg-black-hover);
+    color: var(--color-white);
+}
+
+.courses-container {
+    height: 25rem;
+    margin-top: 0;
+}
+
+.card-container {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    gap: 1.3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    height: 90%;
+    border: 0.1rem solid var(--bg-black-hover);
+    border-radius: 1rem;
+    background: var(--bg-black-secondary);
+}
+
+.image-container {
+    width: 100%;
+    height: 50%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+}
+
+.desc-container {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.desc-container .course-name {
+    text-align: center;
+    color: var(--color-white);
+}
+
+.desc-container button {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--bg-black-main);
+    margin-top: 1.5rem;
+}
+
+.desc-container button span {
+    margin-right: 0.5rem;
+    color: var(--color-white);
+}
+
+.desc-container button i {
+    color: var(--color-white);
+}
+
+.desc-container ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2.3rem;
+    margin-top: 1.5rem;
+    align-content: e;
+    justify-content: center;
+}
+
+.desc-container li a,
+.desc-container li{
     color: var(--color-white);
 }
 
